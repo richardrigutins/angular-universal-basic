@@ -28,6 +28,10 @@ To build the project with server-side rendering with Universal, run `npm run bui
 
 To prerender your application's pages, run `npm run prerender`. The prerendered files will be stored in the `dist/angular-universal-basic/browser` directory.
 
+## Running with the SWA emulator
+
+To run your application with the [Azure Static Web Apps emulator](https://docs.microsoft.com/azure/static-web-apps/local-development), first build the application with `npm run swa:build`. Then, run `npm run swa:start` to start the emulator. The browser will automatically open to the application's URL.
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).

@@ -1,0 +1,13 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/static-web-apps-cli/main/schema/swa-cli.config.schema.json",
+    "configurations": {
+        "app": {
+            "context": "http://localhost:4200",
+            "apiLocation": "",
+            "outputLocation": "dist/angular-universal-basic/browser",
+            "devserverTimeout": 10000,
+            "open": true,
+            "appBuildCommand": "npm run prerender"
+        }
+    }
+}
