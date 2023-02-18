@@ -4,7 +4,7 @@
         "app": {
             "context": "http://localhost:4200",
             "apiLocation": "",
-            "outputLocation": "dist/angular-universal-basic/browser",
+            "outputLocation": "dist/angular-universal-swa-basic/browser",
             "devserverTimeout": 10000,
             "open": true,
             "appBuildCommand": "npm run prerender"

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-universal-basic": {
+    "angular-universal-swa-basic": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-universal-basic/browser",
+            "outputPath": "dist/angular-universal-swa-basic/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-universal-basic:build:production"
+              "browserTarget": "angular-universal-swa-basic:build:production"
             },
             "development": {
-              "browserTarget": "angular-universal-basic:build:development"
+              "browserTarget": "angular-universal-swa-basic:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-universal-basic:build"
+            "browserTarget": "angular-universal-swa-basic:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/angular-universal-basic/server",
+            "outputPath": "dist/angular-universal-swa-basic/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
@@ -116,12 +116,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "angular-universal-basic:build:development",
-              "serverTarget": "angular-universal-basic:server:development"
+              "browserTarget": "angular-universal-swa-basic:build:development",
+              "serverTarget": "angular-universal-swa-basic:server:development"
             },
             "production": {
-              "browserTarget": "angular-universal-basic:build:production",
-              "serverTarget": "angular-universal-basic:server:production"
+              "browserTarget": "angular-universal-swa-basic:build:production",
+              "serverTarget": "angular-universal-swa-basic:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -135,12 +135,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-universal-basic:build:production",
-              "serverTarget": "angular-universal-basic:server:production"
+              "browserTarget": "angular-universal-swa-basic:build:production",
+              "serverTarget": "angular-universal-swa-basic:server:production"
             },
             "development": {
-              "browserTarget": "angular-universal-basic:build:development",
-              "serverTarget": "angular-universal-basic:server:development"
+              "browserTarget": "angular-universal-swa-basic:build:development",
+              "serverTarget": "angular-universal-swa-basic:server:development"
             }
           },
           "defaultConfiguration": "production"

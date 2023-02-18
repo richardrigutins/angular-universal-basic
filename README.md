@@ -1,4 +1,4 @@
-# Angular Universal basic
+# Angular Universal SWA basic
 
 Use this repo with to build and customize a new static [Angular Universal](https://angular.io/guide/universal) application with [Azure Static Web Apps](https://docs.microsoft.com/azure/static-web-apps/overview).
 
@@ -26,7 +26,7 @@ To build the project with server-side rendering with Universal, run `npm run bui
 
 ## Prerendering
 
-To prerender your application's pages, run `npm run prerender`. The prerendered files will be stored in the `dist/angular-universal-basic/browser` directory.
+To prerender your application's pages, run `npm run prerender`. The prerendered files will be stored in the `dist/angular-universal-swa-basic/browser` directory.
 
 ## Running with the SWA emulator
 
