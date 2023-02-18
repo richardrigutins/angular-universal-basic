@@ -68,6 +68,6 @@ This repo contains a GitHub Actions workflow template that can be used to deploy
       repo_token: ${{ secrets.GITHUB_TOKEN }}
       action: "upload"
       app_location: "/"
-      output_location: "dist/angular-universal-basic/browser" # Change this; uses the output location of the Angular Universal application
+      output_location: "dist/angular-universal-swa-basic/browser" # Change this; uses the output location of the Angular Universal application
       app_build_command: "npm run prerender -- --routes-file routes.txt" # Add this; uses theprerender command to build the Angular Universal application
 ```
