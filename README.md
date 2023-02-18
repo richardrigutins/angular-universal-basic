@@ -49,3 +49,25 @@ Run `ng lint` to execute the linter.
 ### Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Deploying to Azure Static Web Apps
+
+### Using GitHub Actions
+
+This repo contains a GitHub Actions workflow template that can be used to deploy the application to Azure Static Web Apps. To set up the workflow, you can either:
+
+* Remove the __.template__ extension from the __.github/workflows/azure-static-web-apps.ymltemplate__ file, replace the secrets in the file with your own values, and commit the changes to the__main__ branch. The workflow will then be triggered automatically.
+* Use an existing workflow file. To build an Angular Universal application, specify the custom build command and the output directory in the workflow file:
+
+```yaml
+  - name: Build And Deploy
+    id: builddeploy
+    uses: Azure/static-web-apps-deploy@v1
+    with:
+      azure_static_web_apps_api_token: ${{ secrets.YOUR_API_TOKEN }} # Replace with the name ofyour secret
+      repo_token: ${{ secrets.GITHUB_TOKEN }}
+      action: "upload"
+      app_location: "/"
+      output_location: "dist/angular-universal-basic/browser" # Change this; uses the output location of the Angular Universal application
+      app_build_command: "npm run prerender -- --routes-file routes.txt" # Add this; uses theprerender command to build the Angular Universal application
+```
