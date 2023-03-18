@@ -28,6 +28,7 @@ jobs:
           app_location: "/"
           output_location: "dist/angular-universal-swa-basic/browser" # Change this; uses the output location of the Angular Universal application
           app_build_command: "npm run prerender -- --routes-file routes.txt" # Add this; uses the prerender command to build the Angular Universal application
+          # app_build_command: "npm run prerender -- --routes-file routes.txt" # Use this instead if you have a custom routes file
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
