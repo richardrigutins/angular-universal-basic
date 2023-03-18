@@ -66,14 +66,25 @@ This repository contains a GitHub Actions workflow template that can be used to 
 * Use an existing workflow file. To build an Angular Universal application, specify the custom build command and the output directory in the workflow file:
 
 ```yaml
-  - name: Build And Deploy
-    id: builddeploy
-    uses: Azure/static-web-apps-deploy@v1
-    with:
-      azure_static_web_apps_api_token: ${{ secrets.YOUR_API_TOKEN }} # Replace with the name ofyour secret
-      repo_token: ${{ secrets.GITHUB_TOKEN }}
-      action: "upload"
-      app_location: "/"
-      output_location: "dist/angular-universal-swa-basic/browser" # Change this; uses the output location of the Angular Universal application
-      app_build_command: "npm run prerender -- --routes-file routes.txt" # Add this; uses theprerender command to build the Angular Universal application
+- name: Build And Deploy
+  id: builddeploy
+  uses: Azure/static-web-apps-deploy@v1
+  with:
+    azure_static_web_apps_api_token: ${{ secrets.YOUR_API_TOKEN }} # Replace with the name of your secret
+    repo_token: ${{ secrets.GITHUB_TOKEN }}
+    action: "upload"
+    app_location: "/"
+    output_location: "dist/angular-universal-swa-basic/browser" # Change this; uses the output location of the Angular Universal application
+    app_build_command: "npm run prerender -- --routes-file routes.txt" # Add this; uses the prerender command to build the Angular Universal application
+    # app_build_command: "npm run prerender -- --routes-file routes.txt" # Use this instead if you have a custom routes file
 ```
+
+The workflow will then be triggered automatically when you push to the __main__ branch, and it will deploy the application to Azure Static Web Apps.
+
+### Using the Static Web Apps CLI
+
+To deploy the application to Azure Static Web Apps using the [Static Web Apps CLI](https://azure.github.io/static-web-apps-cli/), run the following commands:
+
+- `npm run swa:login` to log in to Azure.
+- `npm run swa:build` to build the application.
+- `npm run swa:deploy` to deploy the application.
